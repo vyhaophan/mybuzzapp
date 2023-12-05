@@ -23,7 +23,7 @@ jobs:
           virtualenvs-in-project: true
           
       - name: Install dependencies
-        working-directory: ${{  GITHUB_ACTION_PATH }}
+        working-directory: ${{  github.workspace }}
         run: poetry install
 
       - name: Bundle

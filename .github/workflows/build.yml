@@ -21,15 +21,9 @@ jobs:
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true
-
-      - id: get-user
-        run: echo "::set-output name=uid_gid::$(id -u):$(id -g)"
-
-      - id: get-workdir
-        run: echo "::set-output name=workdir::$(echo '${{ runner.workspace }}' | sed s:/[^/]*$::)"
-
+          
       - name: Install dependencies
-        working-directory: ${{ github.action_path }}
+        working-directory: ${{  GITHUB_ACTION_PATH }}
         run: poetry install
 
       - name: Bundle

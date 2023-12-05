@@ -8,6 +8,9 @@ build/
 htmlcov/
 coverage.xml
 .idea/
+.github/workflows/ci.yml
+.github/workflows/gh-pages.yml
+.github/workflows/snapcraft.yml
 
 # whisper_cpp
 libwhisper.*
